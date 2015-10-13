@@ -8,3 +8,5 @@ Usage:
 * For your experiments create a branch and switch to it: `git checkout -b hobara`
 * Later you can delete the branch with: `git branch -d hobara`
 * To get the latest files: `git checkout -b master` (switch to master branch) and then `git pull`
+* Instead of cloning and creating branches, you may also fork this repo with your github account and then work on your local copy. You need to [sync your fork](https://help.github.com/articles/syncing-a-fork/) after I added new files.
+
