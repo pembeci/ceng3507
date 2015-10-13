@@ -1,5 +1,5 @@
 # CENG 3507 
-This is the sharing repo for CENG 3507 Web Development and Programming course.
+This is the sharing repo for CENG 3507 Web Development and Programming course offered in MSKU [Department of Computer Engineering](http://bilmuh.mu.edu.tr/).
 
 Usage:
 
