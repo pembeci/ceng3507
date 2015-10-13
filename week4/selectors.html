@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>CSS Selectors</title>
+  <style>
+body {
+  border: 1px solid brown;
+  padding-left: 50px;
+  padding-bottom: 100px;
+} 
+#list2item3 {
+   background-color: gold; 
+}
+.b {
+  background-color: peachpuff;
+  word-spacing: 20px;
+}
+.a {
+  background-color: lightblue;
+  width: 75%;
+}
+li {
+  background-color: lime;
+  margin: 3px;
+}
+ol li {
+  border: 3px solid gray;
+}
+ul.c li {
+  font-family: Courier, "Courier New", monospace;
+}
+div {
+  border: 1px solid gray;
+  padding: 10px;
+}
+.level2 b {
+  background-color: skyblue;
+}
+.level2 > b {
+  color: tomato;
+}
+ol li#f {
+  background-color: khaki;
+}
+ol li.e {
+  background-color: teal;
+}
+
+ol.d li {
+  background-color: violet;
+}
+
+em {
+  font-size: 10px;
+}
+b {
+  font-size: 18px  !important;
+}
+b em {
+  font-size: 30px;
+}
+  </style>
+</head>
+<body>
+<ul class="c">
+<li>list1 item1</li>
+<li>list1 item2</li>
+<li class="a">list1 item3</li>
+<li>list1 item4</li>
+</ul>
+<ul> 
+<li>list2 item1</li>
+<li>list2 item2</li>
+<li class="b" id="list2item3" style="background-color: hotpink;">list2 item3</li>
+<li>list2 item4</li>
+</ul>
+<ol class="d">
+<li>list1 item1</li>
+<li style="background-color: black; color:wheat;">list1 item2</li>
+<li id="f">list1 item3 (ol.d li#f)</li>
+<li class="e">list1 item4 (ol.d li.e)</li>
+</ol>
+<ol class="c">
+<li class="b a">list2 item1</li>
+<li>list2 item2</li>
+<li>list2 item3</li>
+<li>list2 item4</li>
+</ol>
+<p>Paragraph1 <p>Paragraph2</p> Paragraph1 </p>
+<div>Level1 
+  <div class="level2">Level2 <b>bold</b>
+    <div>
+      Level3 <b>bold</b>
+    </div>
+       Level2
+  </div> 
+Level1 
+</div>
+<p>Blah blah <em>italic</em></p>
+<p>Blah blah <b>bold and <em>italic</em></b></p>
+</body>
+</html>
+
+
+
+
+
+
