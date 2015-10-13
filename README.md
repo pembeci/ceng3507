@@ -6,4 +6,5 @@ Usage:
 * Install git.
 * Clone the repository: `git clone https://github.com/pembeci/ceng3507.git`
 * For your experiments create a branch and switch to it: `git checkout -b hobara`
+* Later you can delete the branch with: `git branch -d hobara`
 * To get the latest files: `git checkout -b master` (switch to master branch) and then `git pull`
