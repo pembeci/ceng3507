@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>CSS Layout</title>
+<style>
+body {
+  padding: 75px;
+}
+/* b {
+  display: block;
+} */
+p {
+  display: inline;
+}
+em {
+  display: none; 
+}
+p:hover em {
+  display: inline;
+}
+div {
+  border: 1px dotted gray;
+}
+#outer1 {
+  /* position: relative; */
+}
+#inner1 {
+  position: relative;
+  /* margin: 40px; */
+  /* margin-left: 10px; */
+  /* margin: 20px 40px 60px 80px; */
+  /* margin: 15px 75px; */
+  margin: 20px auto;
+  width: 70%;  
+}
+#maxw {
+  margin: 10px;
+  max-width: 500px;
+  height: 100px;
+  background-color: darkseagreen;
+}
+#box1 {
+  width: 300px;
+}
+#box2 {
+  width: 300px;
+  padding: 30px;
+  border: 20px solid black;
+}
+#box3 {
+  width: 300px;
+  padding: 30px;
+  border: 20px solid black;
+  box-sizing: border-box;  
+}
+li {
+  border: 1px dotted gray;
+  background-color: darkseagreen;
+}
+#example div {
+  background-color: lightcoral;
+}
+#div-1 {
+ position:relative;
+ height:250px;
+}
+#div-1a {
+ position:absolute;
+ top:0;
+ right:0;
+ width:400px;
+}
+#div-1b {
+ position:absolute;
+ top:0;
+ left:0;
+ width:200px;
+}
+#div-1c {
+ background-color: darkseagreen !important; 
+}
+</style>  
+</head>
+<body>
+<p>Some text <em>here</em> and an <b>inline</b> element.</p>
+<p>Another paragraph</p>
+<div id="outer1">
+Outer div
+  <div id="inner1">
+  Inner div
+  <ul style="position: relativeeee;">
+	<li>one</li>
+	<li style="position: relative; top:10px; left:50px;">two</li>
+	<li>three</li>
+	<li style="position: absolute; top:10px; right:50px;">four</li>
+	<li>five</li>
+	</ul>
+  </div>
+Outer div
+</div>  
+<div id="maxw">
+</div>
+<h3>Box Model</h3>
+<div id="box1">Some content......................</div>
+<div id="box2">Some content......................</div>
+<div id="box3">Some content......................</div>
+<h3>position property</h3>
+<div id="example">
+
+<div id="div-before">
+<p>id = div-before</p>
+</div>
+
+<div id="div-1">
+<div id="div-1-padding">
+
+<p>id = div-1</p>
+
+<div id="div-1a">
+<p>id = div-1a</p>
+<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Integer pretium dui sit amet felis. Integer sit amet diam. Phasellus ultrices viverra velit.</p>
+</div>
+
+<div id="div-1b">
+<p>id = div-1b</p>
+<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Integer pretium dui sit amet felis. Integer sit amet diam. Phasellus ultrices viverra velit. Nam mattis, arcu ut bibendum commodo, magna nisi tincidunt tortor, quis accumsan augue ipsum id lorem.</p>
+</div>
+
+<div id="div-1c"><p>id = div-1c. id = div-1c. id = div-1c. id = div-1c. id = div-1c. </p></div>
+
+</div></div>
+
+<div id="div-after">
+<p>id = div-after</p>
+</div>
+
+</div> <!-- /id=example -->
+</body>
+</html>
+
+
+
+
+
+
