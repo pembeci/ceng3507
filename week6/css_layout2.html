@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>CSS Layout 2</title>
+<style>
+body {
+  padding-bottom: 15px;
+}
+p {
+  margin: 0px;
+}
+#example {
+  width: 700px;
+  margin: 30px auto;
+}
+#div-before, #div-after {
+background-color: #8888DD;
+margin: 0px;
+}
+#div-after {
+  
+}
+#div-1 {
+background-color: black;
+color: white;
+padding: 10px;
+}
+#div-1a {
+background-color: #DD3333;
+float: left;
+width: 200px;
+margin-right: 20px;
+margin-bottom: 10px; 
+}
+#div-1b {
+background-color: #33DD33;
+float:left;
+width:460px;
+}
+#div-1c {
+background-color: #3333DD;
+clear: both;
+}
+.clearfix {
+  overflow: auto;
+}
+#outer2 {
+  background-color: #3333DD;
+  position: relative;
+  width: 60%;
+  height: 300px;
+  margin: 30px auto;
+  overflow: hidden;
+}
+.inner {
+  width: 90px;
+  height: 90px;
+  border: 1px solid black;
+  position: absolute; 
+  opacity: 0.8;
+}
+#box1 {
+  top: 60px;
+  left: 60px;
+  background-color: red;
+  z-index: 5;
+}
+#box2 {
+  top: 80px;
+  left: 80px;
+  background-color: green;
+  z-index: 2;
+}
+#box3 {
+  top: 100px;
+  left: 100px;
+  background-color: gold;
+  z-index: 10;
+}
+#box4 {
+  bottom: 50px;
+  left: 500px;
+  width: 200px;
+  height: 200px;
+  background-color: gold;
+  z-index: 10;
+  overflow: hidden;
+}
+</style>  
+</head>
+<body>
+<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Integer pretium dui sit amet felis. Integer sit amet diam. Phasellus ultrices viverra velit. Nam mattis, arcu ut bibendum commodo, magna nisi tincidunt tortor, quis accumsan augue ipsum id lorem.</p>
+<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Integer pretium dui sit amet felis. Integer sit amet diam. Phasellus ultrices viverra velit. Nam mattis, arcu ut bibendum commodo, magna nisi tincidunt tortor, quis accumsan augue ipsum id lorem.</p>
+<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Integer pretium dui sit amet felis. Integer sit amet diam. Phasellus ultrices viverra velit. Nam mattis, arcu ut bibendum commodo, magna nisi tincidunt tortor, quis accumsan augue ipsum id lorem.</p>
+<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Integer pretium dui sit amet felis. Integer sit amet diam. Phasellus ultrices viverra velit. Nam mattis, arcu ut bibendum commodo, magna nisi tincidunt tortor, quis accumsan augue ipsum id lorem.</p>
+<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Integer pretium dui sit amet felis. Integer sit amet diam. Phasellus ultrices viverra velit. Nam mattis, arcu ut bibendum commodo, magna nisi tincidunt tortor, quis accumsan augue ipsum id lorem.</p>
+<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Integer pretium dui sit amet felis. Integer sit amet diam. Phasellus ultrices viverra velit. Nam mattis, arcu ut bibendum commodo, magna nisi tincidunt tortor, quis accumsan augue ipsum id lorem.</p>
+<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Integer pretium dui sit amet felis. Integer sit amet diam. Phasellus ultrices viverra velit. Nam mattis, arcu ut bibendum commodo, magna nisi tincidunt tortor, quis accumsan augue ipsum id lorem.</p>
+<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Integer pretium dui sit amet felis. Integer sit amet diam. Phasellus ultrices viverra velit. Nam mattis, arcu ut bibendum commodo, magna nisi tincidunt tortor, quis accumsan augue ipsum id lorem.</p>
+<div id="example">
+
+<div id="div-before">
+<p>id = div-before</p>
+</div>
+
+<div id="div-1">
+<p>id = div-1</p>
+
+<div id="div-1a">
+<p>id = div-1a</p>
+<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Integer pretium dui sit amet felis. Integer sit amet diam. Phasellus ultrices viverra velit.</p>
+</div>
+
+<div id="div-1b">
+<p>id = div-1b</p>
+<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Integer pretium dui sit amet felis. Integer sit amet diam. Phasellus ultrices viverra velit. Nam mattis, arcu ut bibendum commodo, magna nisi tincidunt tortor, quis accumsan augue ipsum id lorem.</p>
+</div>
+
+<div id="div-1c"><p>id = div-1c. id = div-1c. id = div-1c. id = div-1c. id = div-1c. </p></div>
+
+</div>
+
+<div id="div-after">
+<p>id = div-after</p>
+</div>
+
+</div> <!-- /id=example -->
+<div id="outer" class="clearfix" style="width: 75%; border: 1px solid gray">
+ <div id="inner" style="float:right; border:1px dotted gray; width: 300px;">  
+   <b>Author</b>: ....<br/>
+   <b>Author</b>: ....<br/>
+   <b>Author</b>: ....<br/>
+   <b>Year</b>: ....
+  </div>
+  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. <!-- Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit.  -->
+
+</div>
+<div id="ad-content" style="opacity: 0.8; position: fixed; top: 10px; right: 10px; width: 250px; background-color: lightgray" >Click me. Win 1000$ dollars.</div>
+<div id="outer2">
+ <div class="inner" id="box1">box1</div>
+ <div class="inner" id="box3">box3</div>
+ <div class="inner" id="box2">box2</div>
+ <div class="inner" id="box4">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.  Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit.  </div>
+</body>
+</html>
+
+
+
+
+
+
