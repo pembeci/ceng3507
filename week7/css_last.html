@@ -4,43 +4,22 @@
   <meta charset="utf-8">
   <title>CSS properties </title>
   <link href='https://fonts.googleapis.com/css?family=Noto+Sans:400,700&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
+  <link href="style.css" rel='stylesheet' type='text/css'>
+  <link rel="icon" href="book_icon_small.png" type='image/png'>
 <style>
-body {
-  padding: 15px;
-  font-family: 'Noto Sans', sans-serif;
-}
-#book1 li {
-  border: 1px solid gray;
-  list-style-position: inside;
-   list-style-image: url(book_icon_small.png);
-}
-#book2 li {
-  border: 1px solid gray;
-  list-style-type: none;
-  background: url(book_icon_small.png) no-repeat;
-  height: 40px;
-  padding-left: 60px;
-  padding-top: 10px;
-  vertical-align: center;
-}
-#test1 {
-  /* text-transform: capitalize; */
-  font-variant: small-caps;
-   cursor: se-resize;
-}
-body {
-  padding-bottom: 300px;
-  background: 50% 50% no-repeat url(https://avatars3.githubusercontent.com/u/2614837?v=3&s=460);
-  background-attachment: fixed;  
-}
-#test2 {
-  /* height: 100px; */
-  border: 1px solid gray;
-  
-}
+/* @import url(style.css); */
+@import url(custom.css);
+@import url("fineprint.css") print;
+
 </style>  
 </head>
 <body>
+<h2>LEARNING CSS ANIMATION</h2>
+<ul>
+  <li><div class="famfamfam-flag-fr"></div>France</li>
+  <li><div class="famfamfam-flag-tr"></div>Turkey</li>
+  <li><div class="famfamfam-flag-de"></div>Germany</li>
+</ul>
 Pijamalı adam yağız şoföre çabucak güvendi.
   <div id="test1">My Name Is Red.</div>
   <div id="test2">blah<br>blah<br>blah
