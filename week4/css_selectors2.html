@@ -49,14 +49,58 @@ table td {
 #footer > a {
    color: red;
 }
+
+td.cellA + td {
+  background-color: rosybrown;
+}
+td.cellB ~ td {
+  background-color: royalblue;
+}
+#tablo2 td.first+td+td {
+   background-color: royalblue;
+} 
+#tablo2 thead td {
+  background-color: lightgray;
+} 
+
+p[align*="i"] {
+  line-height: 32px;
+}
+
+.listA li:first-child+li {
+  font-family: Courier;
+}
+a:hover {
+  font-size: 200%;
+}
+tr:hover {
+  background-color: greenyellow !important;
+}
+p:first-letter {
+  font-size: 130%;
+  font-weight: bold;
+}
+p.new:after {
+   content: "NEW";
+   width: 100px;
+   background-color: lightblue;
+   color: red;
+}
+
+#tablo3 tr:nth-child(2n) {
+   background-color: #FF71E3;
+}
+#tablo3 tr:nth-child(2n+1) {
+   background-color: #76BDFF;
+}
 </style>  
 </head>
 <body>
 Blah blah ...
   <div id="content">
    <p>Lorem <a href="#">ipsum</a> <b>dolor sit amet, <xx>consectetur</xx> adipiscing elit</b>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-   <p>Lorem ipsum <a href="#">dolor</a> sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-   <p>Lorem <b>ipsum dolor sit amet, consectetur</b> adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+   <p class="new">Lorem ipsum <a href="#">dolor</a> sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+   <p class="new">Lorem <b>ipsum dolor sit amet, consectetur</b> adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
   </div> 
     <a href="#">Some link</a>
    <ul>
@@ -84,13 +128,62 @@ Blah blah ...
      <tr><td></td><td></td><td></td><td></td><td></td></tr>
    </thead>
    <tbody>
+	<tr><td></td><td class="cellB"></td><td></td><td></td><td></td></tr>
+	<tr><td></td><td class="cellA"></td><td></td><td></td><td></td></tr>
+	<tr><td></td><td></td><td></td><td></td><td></td></tr>
+	<tr><td></td><td></td><td class="cellB"></td><td></td><td></td></tr>
+	<tr><td class="cellA"></td><td></td><td></td><td></td><td></td></tr>
+	</tbody>
+ </table> 
+ 
+ <table id="tablo2">
+   <thead>
+     <tr><td></td><td></td><td></td><td></td><td></td></tr>
+   </thead>
+   <tbody>
+	<tr><td class="first"></td><td></td><td></td><td></td><td></td></tr>
+	<tr><td class="first"></td><td></td><td></td><td></td><td></td></tr>
+	<tr><td class="first"></td><td></td><td></td><td></td><td></td></tr>
+	<tr><td class="first"></td><td></td><td></td><td></td><td></td></tr>
+	<tr><td class="first"></td><td></td><td></td><td></td><td></td></tr>
+	</tbody>
+ </table>
+<h3>Attribute selectors</h3>
+   <p align="center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+      <p align="right">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+         <p align="justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+  <ul class="listA">
+    <li>one</li>
+    <li>two</li>
+    <li>three</li>
+    <li>four</li>              
+  </ul>
+  <ol class="listA">
+    <li>one</li>
+    <li>two</li>
+    <li>three</li>
+    <li>four</li>              
+  </ol>
+  <ul class="listA">
+    <li>one</li>
+    <li>two</li>
+    <li>three</li>
+    <li>four</li>              
+  </ul>
+ <table id="tablo3">
+   <tbody>
+	<tr><td></td><td></td><td></td><td></td><td></td></tr>
+	<tr><td></td><td></td><td></td><td></td><td></td></tr>
+	<tr><td></td><td></td><td></td><td></td><td></td></tr>
+	<tr><td></td><td></td><td></td><td></td><td></td></tr>
+	<tr><td></td><td></td><td></td><td></td><td></td></tr>
 	<tr><td></td><td></td><td></td><td></td><td></td></tr>
 	<tr><td></td><td></td><td></td><td></td><td></td></tr>
 	<tr><td></td><td></td><td></td><td></td><td></td></tr>
 	<tr><td></td><td></td><td></td><td></td><td></td></tr>
 	<tr><td></td><td></td><td></td><td></td><td></td></tr>
 	</tbody>
- </table> 
+ </table>  
 </body>
 </html>
 
