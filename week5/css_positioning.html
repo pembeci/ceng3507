@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>CSS Positioning</title>
+<style>
+body {
+  padding: 75px 30px;
+}
+#list1 {
+  background-color: lightblue;
+}
+#list1 li {
+  background-color: orange;
+  margin: 15px;
+  float: left;
+  height: 50px;
+}
+#list1 li:nth-child(3) {
+  border: 1px solid red;
+  width: 300px;
+  /* margin-top: 500px; */
+}
+#outer {
+  background-color: lightblue;
+}
+.box {
+  background-color: orange;
+  margin: 5px;
+  width: 100px;
+  height: 150px;
+  display:inline-block;
+  vertical-align: middle;
+}
+#box3 {
+ height: 50px;
+ vertical-align: bottom;
+}
+#box4 {
+ height: 50px;
+ vertical-align: top;
+}
+#box2 {
+ height: 50px;
+ vertical-align: top;
+}
+#outer2 {
+  background-color: lightblue;
+}
+#outer2 .box {
+  display:block;
+}
+#box9 {
+  float:left;
+  height: 50px;
+  margin-left: 40px;
+  margin-bottom: 30px;
+}
+#p2 {
+  text-align: justify;
+}
+p#p1 {
+  float: left; 
+  width: 400px; 
+  height: 200px;
+  overflow: hidden;
+}
+#box11 {
+  height: 60px;
+}
+.clear {
+  clear: both;
+  width: 1px;
+  height: 1px;
+}
+#outer3 {
+  background-color: lightblue;
+  position: relative;
+  padding: 0px;
+  width: 600px;
+  height: 300px;
+}
+#outer3 div {
+  background-color: orange;
+  border: 1px solid black;
+  width: 50px;
+  height: 50px;
+  margin: 0px;
+}  
+#outer3 #box15 {
+  position: relative;	
+  top: 0px;
+  left: 0px;
+}
+#outer3 #box13 {
+  position: absolute;	
+  top: 20px;
+  left:20px; 
+}
+#outer3 #box14 {
+  position: absolute;	
+  top: 40px;
+  left:40px; 
+  background-color: red; 
+  z-index: 5;
+}
+#outer3 #box15 {
+  position: absolute;	
+  top: 50px;
+  left:50px;  
+  background-color: yellow;
+  z-index: 7;
+  opacity: 0.5;
+}
+#outer3 #box16 {
+  position: absolute;	
+  top: 60px;
+  left:60px;  
+  background-color: green;
+}
+
+</style>  
+</head>
+<body>
+
+Here is a list:
+<ul id="list1">
+  <li>one</li>
+  <li>two</li>
+  <li>three</li>
+  <li>four</li>
+</ul>
+<div class="clear"></div>
+Boxes in a box:
+<div id="outer">
+  <p>My children:</p>
+  <div class="box" id="box1">#1</div>
+  <div class="box" id="box2">#2</div>
+  vdsvdsvdf
+  <div class="box" id="box3">#3</div>
+  <div class="box" id="box4">#4</div>
+  <div class="box" id="box5">#5</div>
+  <div class="box" id="box6">#6</div>
+  <div class="box" id="box7">#7</div>    
+</div>
+Boxes in a box:
+<div id="outer2">
+  <p>My children:</p>
+  <div class="box" id="box8">#8</div>
+  <div class="box" id="box9">#9</div>
+  <p id="p2">#2: Lorem ipsum <b>dolor sit amet, consectetur adipiscing elit, sed </b>do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+  <div class="box" id="box10">#10</div>
+  <p id="p1">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+  <p>cvsfvfdgvdr</p>
+  <div>Ordinary div</div>  
+  <div class="clear"></div>
+  <div class="box" id="box11">#11</div>
+  <div class="box" id="box12">#12</div>
+</div>
+<h3>position property</h3>
+<div id="outer3">
+  <div id="box13">#13</div>
+  <div id="box14">#14<br>#14<br/>#14</div>
+  <div id="box15">#15</div>
+  <div id="box16">#16</div>
+</body>
+</html>
+
+
+
+
+
+

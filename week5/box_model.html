@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Box Model</title>
+<style>
+body {
+  padding: 0px;
+  padding-left:30px;
+  padding-bottom: 250px;
+}
+b {
+  background-color: gold;
+}
+h2 {
+  background-color: gray;
+  width: 300px;
+}
+#content {
+  background-color: forestgreen;
+  /* height: 400px; 
+  overflow: hidden; */
+  width: 75%;
+}
+p {
+  width:80%;
+  background-color: orange;
+}
+#p2 {
+  max-width: 400px;
+}
+#p3 {
+  min-width: 400px;
+}
+#outer {
+  background-color: lightblue;
+
+  /* padding: 15px;
+  padding-left: 45px;
+  padding-bottom: 3px;
+   */
+  /* padding: 10px 30px 50px 70px; */
+  /* padding: 10px 40px; */ 
+}
+.box {
+  background-color: oooorange;
+  /* margin:10px; */
+}
+#box3 {
+  margin: 10px 30px 50px 70px;
+  padding: 10px;
+  border: 5px solid red;
+  border-bottom: 1px dashed black;
+  border-top-color: orange;
+  border-left-width: 1px;
+  width: 400px;
+}
+#box2 {
+  margin-bottom: 20px;
+}
+
+</style>  
+</head>
+<body>
+<h2>Some title</h2>
+<div id="content">
+  Blah blah ...
+  <p>Some <b>some bold <br>text</b> paragraph<br> Second line</p>
+   <p id="p2">#2: Lorem ipsum <b>dolor sit amet, consectetur adipiscing elit, sed </b>do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+   <p id="p3">#3: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+  <div id="footer">
+     <p>Copyright ....</p>
+  </div>
+</div>
+End of #content
+<div id="outer">
+  My children:
+  <div class="box" id="box1">#1</div>
+  <div class="box" id="box2">#2</div>
+  <div class="box" id="box3">#3</div>
+  <div class="box" id="box4">#4</div>
+</div>
+<h3>Horizontal lists by help of display css propert</h3>
+<style>
+ul#navlist { font-family: sans-serif; }
+
+ul#navlist a
+{
+font-weight: bold;
+text-decoration: none;
+}
+ul#navlist, ul#navlist ul, ul#navlist li
+{
+margin: 0px;
+padding: 0px;
+list-style-type: none;
+}
+ul#navlist li { float: left; }
+ul#navlist li a
+{
+color: #ffffff;
+background-color: #003366;
+padding: 3px;
+border: 1px #ffffff outset;
+}
+ul#navlist li a:hover
+{
+color: #ffff00;
+background-color: #003366;
+}
+ul#navlist li a:active
+{
+color: #cccccc;
+background-color: #003366;
+border: 1px #ffffff inset;
+}
+ul.subnavlist li { 
+  float: none !important; 
+}
+ul.subnavlist { display: nnone;}
+ul#navlist li:hover ul.subnavlist
+{
+display: block;
+position: absolute;
+font-size: 8pt;
+padding-top: 5px;
+}
+ul.subnavlist li a
+{
+padding: 0px;
+margin: 0px;
+}
+ul#navlist li:hover ul.subnavlist li a
+{
+display: block;
+width: 10em;
+border: none;
+padding: 2px;
+}
+ul#navlist li:hover ul.subnavlist li a:before { 
+  content: "**"; 
+}
+</style>
+<div id="navcontainer">
+<ul id="navlist">
+<li id="active"><a href="#" id="current">Item one</a> 
+<ul class="subnavlist">
+	<li class="subactive"><a href="#" id="subcurrent">Subitem one</a></li>
+	<li><a href="#">Subitem two</a></li>
+	<li><a href="#">Subitem three</a></li>
+	<li><a href="#">Subitem four</a></li>
+</ul>
+
+</li>
+<li><a href="#">Item two</a></li>
+<li><a href="#">Item three</a>
+   <ul class="subnavlist">
+	<li class="subactive"><a href="#" id="subcurrent">Subitem one</a></li>
+	<li><a href="http://www.google.com" target="_blank">Subitem two</a></li>
+	<li><a href="#">Subitem three</a></li>
+	<li><a href="#">Subitem four</a></li>
+</ul>
+</li>
+<li><a href="#">Item four</a></li>
+</ul>
+</div>
+</body>
+</html>
+
+
+
+
+
+
