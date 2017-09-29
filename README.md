@@ -1,7 +1,5 @@
-__Announcement: Project Final Phase requirements are [out](https://github.com/pembeci/ceng3507/wiki/Project-Phase-III-(Models)) at our wiki. It may not be 100% complete but good enough for you to start working on it__
-
 # CENG 3507 
-This is the sharing repo for CENG 3507 Web Development and Programming course offered in MSKU [Department of Computer Engineering](http://bilmuh.mu.edu.tr/).
+This is the sharing repo for CENG 3507 Web Development and Programming course offered in MSKU [Department of Computer Engineering](http://ceng.mu.edu.tr/).
 
 Usage:
 
