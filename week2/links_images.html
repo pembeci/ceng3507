@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+     <title>Links and images</title>
+   </head>
+   <body>
+   <p>
+   Jump to <a href="#cwords">C</a>. Jump to <a href="#D">D</a>
+   </p>
+   <p>Here is a <a href="http://www.htmlhelp.com/reference/html40/special/a.html">reference page</a> for a tags.</p>
+   <p>Here is a <a href="http://www.htmlhelp.com/reference/html40/special/bdo.html">reference page</a> which we didn't visit before.</p>
+   <p>Here is out first <a href="../week1/hello_world.html">example page</a>.</p>
+      <p>Here is <a href="page2.html">Page2<a>.</p>
+      <p>Here is <a href="my_pages/page3.html" target=_blank>Page3<a>.</p>
+    
+    <h2>Using images</h2>
+    <p>The required ALT attribute provides alternate text for those not loading images. <a href="http://t24.com.tr/haber/irak-cumhurbaskanindan-partilere-referandum-cagrisi,442475"><img height=80 src="http://media-cdn.t24.com.tr/media/stories/2017/09/page_irak-cumhurbaskanindan-partilere-referandum-cagrisi_509699437.jpg" title="Buyuk baskan" alt="Baskanın resmi"/>Effective ALT text</a> should generally give the function of the image rather than a description of the image. For example, ALT="Welcome to XYZ Corp." would be more appropriate than ALT="XYZ Corp. Logo" for a company's logo on its welcome page. <big><b>Good ALT</b></big> text is crucial to the document's accessibility for users who do not load images; see Use of ALT texts in IMGs for a thorough discussion.</p>
+    <p>
+    2<sup>x</sup> or a<sub>i</sub>
+    </p>
+    <pre>
+/******************************************************************************
+ *  Compilation:  javac HelloWorld.java
+ *  Execution:    java HelloWorld
+ *
+ *  Prints "Hello, World". By tradition, this is everyone's first program.
+ *
+ *  % java HelloWorld
+ *  Hello, World
+ *
+ *  These 17 lines of text are comments. They are not part of the program;
+ *  they serve to remind us about its properties. The first two lines tell
+ *  us what to type to compile and test the program. The next line describes
+ *  the purpose of the program. The next few lines give a sample execution
+ *  of the program and the resulting output. We will always include such 
+ *  lines in our programs and encourage you to do the same.
+ *
+ ******************************************************************************/
+
+public class HelloWorld {
+
+    public static void main(String[] args) {
+        // Prints "Hello, World" to the terminal window.
+        System.out.println("Hello, World");
+    }
+
+}   
+    </pre>
+    <p>
+The LONGDESC attribute gives the location of a long description of the image. This attribute should be used to provide a long description of an image where this would be useful. For example, a painting, graph, or corporate logo could be given a description so that blind and other text-only users can develop a mental picture of the image. For example, ALT="Welcome to XYZ Corp." would be more appropriate than ALT="XYZ Corp. Logo" for a company's logo on its welcome page. Good ALT text is crucial to the document's accessibility for users who do not load images; see Use of ALT texts in IMGs for a thorough discussion. <img border=3 vspace=20 hspace=20 align=left src="http://www.htmlhelp.com/icon/wdglogo1.gif" />For example, ALT="Welcome to XYZ Corp." would be more appropriate than ALT="XYZ Corp. Logo" for a company's logo on its welcome page. Good ALT text is crucial to the document's accessibility for users who do not load images; see Use of ALT texts in IMGs for a thorough discussion. For example, ALT="Welcome to XYZ Corp." would be more appropriate than ALT="XYZ Corp. Logo" for a company's logo on its welcome page. Good ALT text is crucial to the document's accessibility for users who do not load images; see Use of ALT texts in IMGs for a thorough discussion.</p>
+<p>
+<img src="http://www.htmlhelp.com/icon/wdglogo1.gif" />
+</p>
+<p>
+<img src="images/hexchart.gif" width=150/>
+</p>
+<h2>Using an image map</h2>
+<p>
+<MAP NAME="mymap">
+<AREA
+   HREF="contacts.html" ALT="Contacts" TITLE="Contacts"
+   SHAPE=RECT COORDS="51,50,97,184">
+<AREA
+   HREF="products.html" ALT="Products" TITLE="Products"
+   SHAPE=CIRCLE COORDS="251,143,17">
+<AREA
+   HREF="new.html" ALT="New" TITLE="New Page!!!!!!"
+   SHAPE=POLY COORDS="150,117, 190,257, 150,297,110,257">
+</MAP>
+<IMG SRC="images/testmap.gif"
+   ALT="map of GH site" BORDER=1 WIDTH=300 HEIGHT=300
+   USEMAP="#mymap">
+   
+</p>   
+    <h2>A words</h2>
+    <p>a.....</p><p>a.....</p><p>a.....</p><p>a.....</p><p>a.....</p><p>a.....</p><p>a.....</p><p>a.....</p><p>a.....</p><p>a.....</p><p>a.....</p><p>a.....</p><p>a.....</p><p>a.....</p><p>a.....</p>
+        <h2>B words</h2>
+    <p>a.....</p><p>a.....</p><p>a.....</p><p>a.....</p><p>a.....</p><p>a.....</p><p>a.....</p><p>a.....</p><p>a.....</p><p>a.....</p><p>a.....</p><p>a.....</p><p>a.....</p><p>a.....</p><p>a.....</p>
+            <a name="cwords">    
+            <h2>C words</h2>
+    <p>a.....</p><p>a.....</p><p>a.....</p><p>a.....</p><p>a.....</p><p>a.....</p><p>a.....</p><p>a.....</p><p>a.....</p><p>a.....</p><p>a.....</p><p>a.....</p><p>a.....</p><p>a.....</p><p>a.....</p>
+              <a name="D">
+                <h2>D words</h2>
+    <p>a.....</p><p>a.....</p><p>a.....</p><p>a.....</p><p>a.....</p><p>a.....</p><p>a.....</p><p>a.....</p><p>a.....</p><p>a.....</p><p>a.....</p><p>a.....</p><p>a.....</p><p>a.....</p><p>a.....</p>
+   </body>
+</html>

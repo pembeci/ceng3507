@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+     <title>CSS Intro</title>
+   <style>
+   p {
+     background-color: lightblue;
+     color: red;
+     font-size: 110%;
+   }
+      
+   body {
+     background-color: gold;
+     font-family: "Times New Roman";
+   }
+   
+   li {
+     font-size: 24px;     
+     background-color: oldlace;
+   }
+   
+   ul {
+     font-family: "Arial";
+   }
+   
+   h1#xyz {
+     background-color: gray;
+     text-align: center;
+   }
+   
+   p#second { 
+      background-color: rosybrown;
+      color: white;
+      font-size: 120%;
+   }
+     
+   ol {
+     
+   }
+    
+
+   li.odd {
+     background-color: wheat;
+   }
+   
+   
+   li.even {
+     background-color: peru;
+   }
+    
+   .bjk {
+     background-color: black;
+     color: white;
+   }
+   
+   .bigger {
+     font-size: 38px;     
+   }   
+   
+   p.x a {
+     color: orange;
+   }
+
+   p.x > a {
+     letter-spacing: 10px;
+   }
+      
+   p.y a {
+     color: green;
+   }
+   
+   td.first + td + td + td{
+     background-color: pink;
+   }
+   
+   </style>  
+   </head>
+   <body>
+   <h1 id="xyz">Examples 1</h1>
+   <ul>
+    <li class="bjk">one</li>
+    <li id="xyz">two</li>
+    <li style="font-size: 12px;">three</li>
+    <li style="font-style: italic;">four</li>
+    <li style="font-weight: bold;">five</li>
+  
+   </ul>
+   <ol>
+    <li class="odd">111</li>
+    <li class="even">222</li>
+    <li class="odd">333</li>
+    <li class="even">444</li>
+    <li class="odd">555</li>
+    <li class="even">666</li>
+    <li class="odd">777</li>
+   </ol>
+   
+   <h1 class="bjk bigger">Examples 2</h1>
+   Lorem ipsum dolor
+<p>Lorem ipsum dolor sit amet, <b class="bjk">consectetur adipiscing elit. Nam auctor</b> arcu id mi ullamcorper dignissim. Vestibulum id bibendum tellus, quis molestie quam. Mauris luctus neque sit amet luctus accumsan. Nulla facilisi. Aliquam eu urna non enim congue egestas. Sed a leo mattis, ullamcorper diam auctor, posuere lorem. Aenean scelerisque diam et tincidunt volutpat. Morbi ipsum felis, laoreet efficitur ipsum sed, convallis faucibus ante. Nunc sollicitudin mollis odio vitae efficitur. Pellentesque tincidunt nibh eu eros maximus, quis sagittis odio dictum. Ut condimentum tellus ipsum, at lobortis odio aliquam scelerisque. Integer mollis consectetur massa id aliquam. Maecenas nec nisl lectus. Praesent dictum ante quis placerat sagittis. Mauris condimentum elementum tempor.</p>
+<p id="second">Vivamus finibus metus non purus lobortis blandit. Ut id finibus sem, non ornare orci. Quisque laoreet auctor arcu, ut rutrum orci consequat et. Phasellus tempus commodo nisi, non tristique mauris ultrices id. Proin condimentum diam in feugiat mattis. Aenean feugiat lorem ac massa tempor luctus. Integer turpis dolor, rhoncus nec purus vel, dictum auctor quam. Duis a volutpat neque. Morbi facilisis cursus dolor id posuere. In semper, nisl vitae dictum lacinia, lacus nibh interdum ex, eu sollicitudin lectus ipsum in diam. Pellentesque condimentum lectus eget eros luctus, vitae rhoncus justo euismod. Curabitur suscipit porttitor ante non interdum.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam auctor arcu id mi ullamcorper dignissim. Vestibulum id bibendum tellus, quis molestie quam. Mauris luctus neque sit amet luctus accumsan. Nulla facilisi. Aliquam eu urna non enim congue egestas. Sed a leo mattis, ullamcorper diam auctor, posuere lorem. Aenean scelerisque diam et tincidunt volutpat. Morbi ipsum felis, laoreet efficitur ipsum sed, convallis faucibus ante. Nunc sollicitudin mollis odio vitae efficitur. Pellentesque tincidunt nibh eu eros maximus, quis sagittis odio dictum. Ut condimentum tellus ipsum, at lobortis odio aliquam scelerisque. Integer mollis consectetur massa id aliquam. Maecenas nec nisl lectus. Praesent dictum ante quis placerat sagittis. Mauris condimentum elementum tempor.</p>
+<p>Vivamus <a href="p1.html">finibus</a> metus non purus lobortis blandit. Ut id finibus sem, non ornare orci. Quisque laoreet auctor arcu, ut rutrum orci consequat et. Phasellus tempus commodo nisi, non tristique mauris ultrices id. Proin condimentum <a href="p1.html">finibus</a> in feugiat mattis. Aenean feugiat lorem ac massa tempor <a href="p1.html">finibus</a>. Integer turpis dolor, rhoncus nec purus vel, dictum auctor quam. Duis a volutpat neque. Morbi facilisis cursus dolor id posuere. <a href="p1.html">finibus</a>, nisl vitae dictum lacinia, lacus nibh interdum ex, eu sollicitudin lectus ipsum in diam. Pellentesque condimentum lectus eget eros luctus, vitae rhoncus justo euismod. Curabitur suscipit porttitor ante non interdum.</p>
+<p class="x">Vivamus <a href="p1.html">finibus</a> metus non purus lobortis blandit. Ut id finibus sem, non ornare orci. Quisque laoreet auctor arcu, ut rutrum orci consequat et. Phasellus tempus commodo nisi, non tristique mauris ultrices id. <b>Proin condimentum <a href="p1.html">finibus</a> in feugiat</b> mattis. Aenean feugiat lorem ac massa tempor <a href="p1.html">finibus</a>. Integer turpis dolor, rhoncus nec purus vel, dictum auctor quam. Duis a volutpat neque. Morbi facilisis cursus dolor id posuere. <a href="p1.html">finibus</a>, nisl vitae dictum lacinia, lacus nibh interdum ex, eu sollicitudin lectus ipsum in diam. Pellentesque condimentum lectus eget eros luctus, vitae rhoncus justo euismod. Curabitur suscipit porttitor ante non interdum.</p>
+<p class="y">Vivamus <a href="p1.html">finibus</a> metus non purus lobortis blandit. Ut id finibus sem, non ornare orci. Quisque laoreet auctor arcu, ut rutrum orci consequat et. Phasellus tempus commodo nisi, non tristique mauris ultrices id. Proin condimentum <a href="p1.html">finibus</a> in feugiat mattis. Aenean feugiat lorem ac massa tempor <a href="p1.html">finibus</a>. Integer turpis dolor, rhoncus nec purus vel, dictum auctor quam. Duis a volutpat neque. Morbi facilisis cursus dolor id posuere. <a href="p1.html">finibus</a>, nisl vitae dictum lacinia, lacus nibh interdum ex, eu sollicitudin lectus ipsum in diam. Pellentesque condimentum lectus eget eros luctus, vitae rhoncus justo euismod. Curabitur suscipit porttitor ante non interdum.</p>
+
+  <h2>Sibling selector</h2>
+  
+       <table border=1 cellpadding=10 cellspacing=0 align=center>
+       <tbody>
+         <tr><td class="first">1</td><td>2</td><td>3</td><td>4</td></tr>
+         <tr><td class="first">5</td><td>6</td><td>7</td><td>8</td></tr>
+                  <tr><td class="first">9</td>
+                      <td>10</td>
+                      <td>11</td>
+                      <td>12</td>
+                  </tr>
+                 
+         <tr><td class="first">13</td><td>14</td><td>15</td><td>16</td>
+         </tr> 
+         <tr><td class="first">17</td><td>18</td><td>19</td><td>20</td>
+         </tr>   
+         <tr><td class="first">21</td><td>22</td><td>23</td><td>24</td>
+         </tr>                                 
+       </tbody>
+     </table>  
+    <br/> <br/><br/><br/><br/><br/><br/><br/>
+   </body>
+</html>

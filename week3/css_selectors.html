@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+     <title>CSS Selectors</title>
+   <style>
+   td:first-child + td + td  {
+     background-color: pink;
+   }
+   
+   h2:first-child {
+     text-align: center;
+   }
+   p a:first-child {
+      font-size: 130%;
+      font-weight: bold;
+   }
+   
+   p a:first-of-type {
+      color: red; 
+   }
+   
+   a {
+     background-color: lightgray;
+   }
+   
+   i {
+     background-color: lightgray;
+   }
+   span {
+      padding: 10px;
+      border: 1px solid green;
+      display: inline-block; 
+      margin-bottom: 3px;   
+   }
+   
+   span:hover {
+      background-color: gold;
+   }
+   
+   tr {
+      background-color: gray;
+   }
+   
+   tr:hover {
+      background-color: gold;
+   }
+   
+   
+   .first span:nth-child(3n+1) {
+      background-color: lime;
+   }
+   .first span:nth-of-type(3n+1) {
+      border-color: red;
+   }
+   
+   div.snd a:link {
+     background-color: lime;
+   }
+
+   div.snd a:visited {
+     background-color: pink;
+   }
+   
+   /* div.snd a:visited, div.snd a:link {
+      text-decoration: none;
+   } */
+   
+   div.snd a {
+      text-decoration: none;
+   }
+   
+   </style>  
+   </head>
+   <body>
+   <p>xxxx</p>
+  <h2>Sibling selector</h2>
+  
+       <table border=1 cellpadding=10 cellspacing=0 align=center>
+       <tbody>
+         <tr><td>1</td><td>2</td><td>3</td><td>4</td></tr>
+         <tr><td>5</td><td>6</td><td>7</td><td>8</td></tr>
+                  <tr><td>9</td>
+                      <td>10</td>
+                      <td>11</td>
+                      <td>12</td>
+                  </tr>
+                 
+         <tr><td>13</td><td>14</td><td>15</td><td>16</td>
+         </tr> 
+         <tr><td>17</td><td>18</td><td>19</td><td>20</td>
+         </tr>   
+         <tr><td>21</td><td>22</td><td>23</td><td>24</td>
+         </tr>                                 
+       </tbody>
+     </table>  
+  <h2>Another example</h2>   
+<p><i>Vivamus</i> <a href="p1.html">finibus</a> metus non purus lobortis blandit. Ut id finibus sem, non ornare orci. Quisque laoreet auctor arcu, ut rutrum orci consequat et. Phasellus tempus commodo nisi, non tristique mauris ultrices id. Proin condimentum <a href="p1.html">finibus</a> in feugiat mattis. Aenean feugiat lorem ac massa tempor <a href="p1.html">finibus</a>. Integer turpis dolor, rhoncus nec purus vel, dictum auctor quam. Duis a volutpat neque. Morbi facilisis cursus dolor id posuere. <a href="p1.html">finibus</a>, nisl vitae dictum lacinia, lacus nibh interdum ex, eu sollicitudin lectus ipsum in diam. Pellentesque condimentum lectus eget eros luctus, vitae rhoncus justo euismod. Curabitur suscipit porttitor ante non interdum.</p>
+<p>Vivamus <a href="p1.html">finibus</a> metus non purus lobortis blandit. Ut id finibus sem, non ornare orci. Quisque laoreet auctor arcu, ut rutrum orci consequat et. Phasellus tempus commodo nisi, non tristique mauris ultrices id. <b>Proin condimentum <a href="p1.html">finibus</a> in feugiat</b> mattis. Aenean feugiat lorem ac massa tempor <a href="p1.html">finibus</a>. Integer turpis dolor, rhoncus nec purus vel, dictum auctor quam. Duis a volutpat neque. Morbi facilisis cursus dolor id posuere. <a href="p1.html">finibus</a>, nisl vitae dictum lacinia, lacus nibh interdum ex, eu sollicitudin lectus ipsum in diam. Pellentesque condimentum lectus eget eros luctus, vitae rhoncus justo euismod. Curabitur suscipit porttitor ante non interdum.</p>
+<p>Vivamus <a href="p1.html">finibus</a> metus <span>non purus</span> lobortis blandit. Ut id finibus sem, non ornare orci. Quisque laoreet auctor arcu, ut rutrum orci consequat et. Phasellus tempus commodo nisi, non tristique mauris ultrices id. Proin condimentum <a href="p1.html">finibus</a> in feugiat mattis. Aenean feugiat lorem ac massa tempor <a href="p1.html">finibus</a>. Integer turpis dolor, rhoncus nec purus vel, dictum auctor quam. Duis a volutpat neque. Morbi facilisis cursus dolor id posuere. <a href="p1.html">finibus</a>, nisl vitae dictum lacinia, lacus nibh interdum ex, eu sollicitudin lectus ipsum in diam. Pellentesque condimentum lectus eget eros luctus, vitae rhoncus justo euismod. Curabitur suscipit porttitor ante non interdum.</p>
+<h2>nth-child</h2>
+<div class="first">
+      <span>1. This span is selected!</span>
+      <b>something extra</b>
+      <span>2. This span is not. :(</span>
+      <span>3. What about this?</span>
+      <span>4. And this one?</span>
+      <span>5. Another example</span>
+      <span>6. Yet another example</span>
+      <span>7. Aaaaand another</span>
+      <span>8. Aaaaand another</span>
+</div>
+
+    <div class="snd">
+     <a href="http://t24.com.tr/yazarlar/murat-belge/cogulcu-ve-cogunlukcu,18145">link1</a> <a href="dummy.page">link2</a>
+    </div>
+    <br/> <br/><br/><br/><br/><br/><br/><br/>
+   </body>
+</html>
