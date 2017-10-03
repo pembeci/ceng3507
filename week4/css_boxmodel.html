@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+     <title>CSS Box Model</title>
+     <style>     
+      * {
+        /* border: 1px solid black; */
+        margin: 0px;
+      }
+      body {
+        margin: 30px 90px;
+        background-color: lightgray;
+      }
+      div.inner {
+        background-color: gold;
+        /* margin: 50px auto; */
+        width: 75%;
+        margin-left:-3%;
+        text-align: center;
+        /* border-style: solid;
+        border-width: 7px;
+        border-color: red; */
+        border: solid red 3px;
+        border-top: dotted green 5px;
+        border-bottom-color: blue;
+      }
+      p {
+        max-width: 300px;
+        background-color: pink;
+        height: 200px;
+        overflow-y: hidden;
+        margin-left: 40px;
+        margin-bottom:60px;
+      }
+      ul {
+        background-color: lightblue;
+      }
+      
+      li {
+        background-color: green;
+        width: 400px;
+        margin: 9px;        
+        padding-left: 50px;
+        padding: 20px;
+      }
+      
+      #content {
+        background-color: gray;
+      }
+     </style>
+   </head>
+   <body>
+   <div id="content">
+       <p>blah blah<br/>blah blah<br/>blah blah<br/>blah blah<br/>blah blah
+       <br/>blah blah<br/>blah blah<br/>blah blah<br/>blah blah<br/>blah blah
+       <br/>blah blah<br/>blah blah<br/>blah blah<br/>blah blah<br/>blah blah</p>
+       <div class="inner">some div content</div>
+       <ul>
+         <li>one</li>
+         <li id="two">two</li>
+         <li>three</li>
+       </ul>       
+   </div>  
+   <div>x</div>
+   </body>
+</html>
