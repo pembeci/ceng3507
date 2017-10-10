@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+     <title>CSS LAYOUT</title>
+     <style>
+      #outer1 {
+        width: 30px;
+        height: 30px;
+        background-color: gold;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        opacity: 0.8;
+      }
+      #outer2 {
+        width: 30px;
+        height: 30px;
+        background-color: lightblue;
+        position: absolute;
+        right: 0px;
+        bottom: 0px;
+        opacity: 0.8;
+      }
+      .row {
+        margin: 3px;
+        background-color: pink;
+        height: 40px;      
+      }
+      #row2 {
+        position: relative;
+        top: 300px;
+        left: 400px;
+      }
+      #annoying {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        width: 140px;
+        border: 1px solid gray;
+        background-color: lightgray;
+      }
+      #outer {
+        background-color: tomato;
+        height: 200px;
+        position: relative;
+      }
+      #special {
+        background-color: orange;      
+        float: left;
+        height: 200px;
+        /* margin-left: 20px; */
+        margin-bottom: 30px;
+        width: 200px;
+      }
+      p {
+        text-align: justify;
+        margin-left: 200px;
+      }
+      .box {
+          float: left;
+          width: 100px;
+          height: 200px;
+          border: 3px solid red;
+          margin: 1em;
+      }
+      .after-box {
+        clear: both;
+      }
+     </style>
+   </head>
+   <body>
+   <h1>Example 1</h1>
+   <div class="box">XXX1</div>
+   <div class="box">XXX2</div>
+   <div class="box">XXX3</div>
+   <div class="box">XXX</div>
+   <div class="box">XXX</div>
+   <div class="box">XXX</div>
+   <div class="box">XXX</div>
+   <div class="box">XXX</div>
+   <div class="box">XXX</div>
+   <div class="box">XXX</div>
+   <div class="box">XXX</div>
+   <div class="box">XXX</div>
+   <div class="box">XXX</div>
+   <div class="box">XXX</div>
+   <div class="box">XXX</div>
+   <div class="after-box"></div>         
+   <h1>Example 2</h1>
+   <div class="row">Link 1</div>
+   <div class="row" id="row2">Link 2</div>
+   <div class="row">Link 3</div>   
+   <div id="outer">
+   OUTER DIV
+       <div id="outer2"></div>
+       <div id="outer1"></div>
+       <div id="annoying">CLICK ME AND WIN MILLIONS</div>
+   </div>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse cursus est mauris, quis aliquet neque laoreet sed. Aliquam nec bibendum lorem. Integer consequat lacus et ante tempus, in blandit ipsum tincidunt. Pellentesque vehicula porta molestie. Etiam tincidunt scelerisque turpis, vitae tincidunt felis dapibus ut. Ut ipsum eros, mattis ultrices placerat ac, convallis quis nunc. Vestibulum pharetra velit dignissim, rhoncus enim fermentum, interdum diam. Sed eu eros libero. Pellentesque sed libero eget urna vulputate molestie vel et tellus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Duis porta felis sit amet scelerisque euismod. Donec sollicitudin pulvinar justo, posuere vestibulum nisi luctus nec. Ut at finibus enim. Aliquam mattis est non justo placerat, ac maximus eros mollis. Fusce vitae hendrerit felis. Quisque sit amet tellus iaculis purus sollicitudin condimentum.</p>
+<p>Quisque pulvinar vitae diam id dignissim. In hac habitasse platea dictumst. Vestibulum augue eros, volutpat vitae nibh a, commodo fermentum purus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi bibendum hendrerit fringilla. Maecenas et erat eget tellus ultricies faucibus. Sed venenatis nunc id velit vestibulum fermentum. Vestibulum at tortor eget nulla mollis tincidunt quis et lectus. Ut finibus mi urna, et luctus nisl scelerisque nec. Mauris augue ligula, varius rutrum sapien eget, molestie imperdiet lectus.</p>
+
+<div id="special">SPECIAL CONTENT<br/>SPECIAL CONTENT<br/>SPECIAL CONTENT<br/></div>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse cursus est mauris, quis aliquet neque laoreet sed. Aliquam nec bibendum lorem. Integer consequat lacus et ante tempus, in blandit ipsum tincidunt. Pellentesque vehicula porta molestie. Etiam tincidunt scelerisque turpis, vitae tincidunt felis dapibus ut. Ut ipsum eros, mattis ultrices placerat ac, convallis quis nunc. Vestibulum pharetra velit dignissim, rhoncus enim fermentum, interdum diam. Sed eu eros libero. Pellentesque sed libero eget urna vulputate molestie vel et tellus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Duis porta felis sit amet scelerisque euismod. Donec sollicitudin pulvinar justo, posuere vestibulum nisi luctus nec. Ut at finibus enim. Aliquam mattis est non justo placerat, ac maximus eros mollis. Fusce vitae hendrerit felis. Quisque sit amet tellus iaculis purus sollicitudin condimentum.</p>
+<p>Quisque pulvinar vitae diam id dignissim. In hac habitasse platea dictumst. Vestibulum augue eros, volutpat vitae nibh a, commodo fermentum purus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi bibendum hendrerit fringilla. Maecenas et erat eget tellus ultricies faucibus. Sed venenatis nunc id velit vestibulum fermentum. Vestibulum at tortor eget nulla mollis tincidunt quis et lectus. Ut finibus mi urna, et luctus nisl scelerisque nec. Mauris augue ligula, varius rutrum sapien eget, molestie imperdiet lectus.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse cursus est mauris, quis aliquet neque laoreet sed. Aliquam nec bibendum lorem. Integer consequat lacus et ante tempus, in blandit ipsum tincidunt. Pellentesque vehicula porta molestie. Etiam tincidunt scelerisque turpis, vitae tincidunt felis dapibus ut. Ut ipsum eros, mattis ultrices placerat ac, convallis quis nunc. Vestibulum pharetra velit dignissim, rhoncus enim fermentum, interdum diam. Sed eu eros libero. Pellentesque sed libero eget urna vulputate molestie vel et tellus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Duis porta felis sit amet scelerisque euismod. Donec sollicitudin pulvinar justo, posuere vestibulum nisi luctus nec. Ut at finibus enim. Aliquam mattis est non justo placerat, ac maximus eros mollis. Fusce vitae hendrerit felis. Quisque sit amet tellus iaculis purus sollicitudin condimentum.</p>
+<p>Quisque pulvinar vitae diam id dignissim. In hac habitasse platea dictumst. Vestibulum augue eros, volutpat vitae nibh a, commodo fermentum purus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi bibendum hendrerit fringilla. Maecenas et erat eget tellus ultricies faucibus. Sed venenatis nunc id velit vestibulum fermentum. Vestibulum at tortor eget nulla mollis tincidunt quis et lectus. Ut finibus mi urna, et luctus nisl scelerisque nec. Mauris augue ligula, varius rutrum sapien eget, molestie imperdiet lectus.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse cursus est mauris, quis aliquet neque laoreet sed. Aliquam nec bibendum lorem. Integer consequat lacus et ante tempus, in blandit ipsum tincidunt. Pellentesque vehicula porta molestie. Etiam tincidunt scelerisque turpis, vitae tincidunt felis dapibus ut. Ut ipsum eros, mattis ultrices placerat ac, convallis quis nunc. Vestibulum pharetra velit dignissim, rhoncus enim fermentum, interdum diam. Sed eu eros libero. Pellentesque sed libero eget urna vulputate molestie vel et tellus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Duis porta felis sit amet scelerisque euismod. Donec sollicitudin pulvinar justo, posuere vestibulum nisi luctus nec. Ut at finibus enim. Aliquam mattis est non justo placerat, ac maximus eros mollis. Fusce vitae hendrerit felis. Quisque sit amet tellus iaculis purus sollicitudin condimentum.</p>
+<p>Quisque pulvinar vitae diam id dignissim. In hac habitasse platea dictumst. Vestibulum augue eros, volutpat vitae nibh a, commodo fermentum purus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi bibendum hendrerit fringilla. Maecenas et erat eget tellus ultricies faucibus. Sed venenatis nunc id velit vestibulum fermentum. Vestibulum at tortor eget nulla mollis tincidunt quis et lectus. Ut finibus mi urna, et luctus nisl scelerisque nec. Mauris augue ligula, varius rutrum sapien eget, molestie imperdiet lectus.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse cursus est mauris, quis aliquet neque laoreet sed. Aliquam nec bibendum lorem. Integer consequat lacus et ante tempus, in blandit ipsum tincidunt. Pellentesque vehicula porta molestie. Etiam tincidunt scelerisque turpis, vitae tincidunt felis dapibus ut. Ut ipsum eros, mattis ultrices placerat ac, convallis quis nunc. Vestibulum pharetra velit dignissim, rhoncus enim fermentum, interdum diam. Sed eu eros libero. Pellentesque sed libero eget urna vulputate molestie vel et tellus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Duis porta felis sit amet scelerisque euismod. Donec sollicitudin pulvinar justo, posuere vestibulum nisi luctus nec. Ut at finibus enim. Aliquam mattis est non justo placerat, ac maximus eros mollis. Fusce vitae hendrerit felis. Quisque sit amet tellus iaculis purus sollicitudin condimentum.</p>
+<p>Quisque pulvinar vitae diam id dignissim. In hac habitasse platea dictumst. Vestibulum augue eros, volutpat vitae nibh a, commodo fermentum purus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi bibendum hendrerit fringilla. Maecenas et erat eget tellus ultricies faucibus. Sed venenatis nunc id velit vestibulum fermentum. Vestibulum at tortor eget nulla mollis tincidunt quis et lectus. Ut finibus mi urna, et luctus nisl scelerisque nec. Mauris augue ligula, varius rutrum sapien eget, molestie imperdiet lectus.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse cursus est mauris, quis aliquet neque laoreet sed. Aliquam nec bibendum lorem. Integer consequat lacus et ante tempus, in blandit ipsum tincidunt. Pellentesque vehicula porta molestie. Etiam tincidunt scelerisque turpis, vitae tincidunt felis dapibus ut. Ut ipsum eros, mattis ultrices placerat ac, convallis quis nunc. Vestibulum pharetra velit dignissim, rhoncus enim fermentum, interdum diam. Sed eu eros libero. Pellentesque sed libero eget urna vulputate molestie vel et tellus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Duis porta felis sit amet scelerisque euismod. Donec sollicitudin pulvinar justo, posuere vestibulum nisi luctus nec. Ut at finibus enim. Aliquam mattis est non justo placerat, ac maximus eros mollis. Fusce vitae hendrerit felis. Quisque sit amet tellus iaculis purus sollicitudin condimentum.</p>
+<p>Quisque pulvinar vitae diam id dignissim. In hac habitasse platea dictumst. Vestibulum augue eros, volutpat vitae nibh a, commodo fermentum purus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi bibendum hendrerit fringilla. Maecenas et erat eget tellus ultricies faucibus. Sed venenatis nunc id velit vestibulum fermentum. Vestibulum at tortor eget nulla mollis tincidunt quis et lectus. Ut finibus mi urna, et luctus nisl scelerisque nec. Mauris augue ligula, varius rutrum sapien eget, molestie imperdiet lectus.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse cursus est mauris, quis aliquet neque laoreet sed. Aliquam nec bibendum lorem. Integer consequat lacus et ante tempus, in blandit ipsum tincidunt. Pellentesque vehicula porta molestie. Etiam tincidunt scelerisque turpis, vitae tincidunt felis dapibus ut. Ut ipsum eros, mattis ultrices placerat ac, convallis quis nunc. Vestibulum pharetra velit dignissim, rhoncus enim fermentum, interdum diam. Sed eu eros libero. Pellentesque sed libero eget urna vulputate molestie vel et tellus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Duis porta felis sit amet scelerisque euismod. Donec sollicitudin pulvinar justo, posuere vestibulum nisi luctus nec. Ut at finibus enim. Aliquam mattis est non justo placerat, ac maximus eros mollis. Fusce vitae hendrerit felis. Quisque sit amet tellus iaculis purus sollicitudin condimentum.</p>
+<p>Quisque pulvinar vitae diam id dignissim. In hac habitasse platea dictumst. Vestibulum augue eros, volutpat vitae nibh a, commodo fermentum purus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi bibendum hendrerit fringilla. Maecenas et erat eget tellus ultricies faucibus. Sed venenatis nunc id velit vestibulum fermentum. Vestibulum at tortor eget nulla mollis tincidunt quis et lectus. Ut finibus mi urna, et luctus nisl scelerisque nec. Mauris augue ligula, varius rutrum sapien eget, molestie imperdiet lectus.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse cursus est mauris, quis aliquet neque laoreet sed. Aliquam nec bibendum lorem. Integer consequat lacus et ante tempus, in blandit ipsum tincidunt. Pellentesque vehicula porta molestie. Etiam tincidunt scelerisque turpis, vitae tincidunt felis dapibus ut. Ut ipsum eros, mattis ultrices placerat ac, convallis quis nunc. Vestibulum pharetra velit dignissim, rhoncus enim fermentum, interdum diam. Sed eu eros libero. Pellentesque sed libero eget urna vulputate molestie vel et tellus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Duis porta felis sit amet scelerisque euismod. Donec sollicitudin pulvinar justo, posuere vestibulum nisi luctus nec. Ut at finibus enim. Aliquam mattis est non justo placerat, ac maximus eros mollis. Fusce vitae hendrerit felis. Quisque sit amet tellus iaculis purus sollicitudin condimentum.</p>
+<p>Quisque pulvinar vitae diam id dignissim. In hac habitasse platea dictumst. Vestibulum augue eros, volutpat vitae nibh a, commodo fermentum purus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi bibendum hendrerit fringilla. Maecenas et erat eget tellus ultricies faucibus. Sed venenatis nunc id velit vestibulum fermentum. Vestibulum at tortor eget nulla mollis tincidunt quis et lectus. Ut finibus mi urna, et luctus nisl scelerisque nec. Mauris augue ligula, varius rutrum sapien eget, molestie imperdiet lectus.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse cursus est mauris, quis aliquet neque laoreet sed. Aliquam nec bibendum lorem. Integer consequat lacus et ante tempus, in blandit ipsum tincidunt. Pellentesque vehicula porta molestie. Etiam tincidunt scelerisque turpis, vitae tincidunt felis dapibus ut. Ut ipsum eros, mattis ultrices placerat ac, convallis quis nunc. Vestibulum pharetra velit dignissim, rhoncus enim fermentum, interdum diam. Sed eu eros libero. Pellentesque sed libero eget urna vulputate molestie vel et tellus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Duis porta felis sit amet scelerisque euismod. Donec sollicitudin pulvinar justo, posuere vestibulum nisi luctus nec. Ut at finibus enim. Aliquam mattis est non justo placerat, ac maximus eros mollis. Fusce vitae hendrerit felis. Quisque sit amet tellus iaculis purus sollicitudin condimentum.</p>
+<p>Quisque pulvinar vitae diam id dignissim. In hac habitasse platea dictumst. Vestibulum augue eros, volutpat vitae nibh a, commodo fermentum purus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi bibendum hendrerit fringilla. Maecenas et erat eget tellus ultricies faucibus. Sed venenatis nunc id velit vestibulum fermentum. Vestibulum at tortor eget nulla mollis tincidunt quis et lectus. Ut finibus mi urna, et luctus nisl scelerisque nec. Mauris augue ligula, varius rutrum sapien eget, molestie imperdiet lectus.</p>
+   </body>
+</html>
