@@ -1,0 +1,7 @@
+p {
+  font-size: 150%;
+}
+
+p.fancy {
+  font-family: "XYZ", "DejaVu Sanssss", "FreeMono", sans-serif;
+}

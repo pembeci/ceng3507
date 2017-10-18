@@ -1,0 +1,7 @@
+@import "general.css";
+
+p {
+   background: lightblue;
+   font-family: 'Saira Extra Condensed', "FreeMono";
+   cursor: help;
+}
