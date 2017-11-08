@@ -1,0 +1,6 @@
+<h2>LATEST POLLS</h2>
+<ul>
+  {% for q in questions %}
+    <li><a href="{% url 'detail_page' q.id %}">{{q.question_text}}</a></li>
+  {% endfor %}
+</ul>
