@@ -17,9 +17,17 @@ from django.conf.urls import url
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.conf import settings
+from my_bookstore import views
 
 urlpatterns = [
+    url(r'^$', views.index, name='index'),
+    url(r'^book/(?P<title>.+)/(?P<book_id>[0-9]+)', views.book_page, name='book'),
+    url(r'^category/(?P<cat>.+)', views.cat_page, name='book'),
     url(r'^admin/', admin.site.urls),
 ]
 
-urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+urlpatterns += static(settings.MEDIA_URL,
+                      document_root=settings.MEDIA_ROOT)
+
+urlpatterns += static(settings.STATIC_URL,
+                      document_root=settings.STATIC_ROOT)

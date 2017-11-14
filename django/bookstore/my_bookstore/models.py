@@ -2,6 +2,9 @@ from django.db import models
 import datetime
 
 class Book(models.Model):
+
+    genre_dict = { "History": "H", "Classic": "C"}
+
     GENRE_CHOICES = (
         ('H', 'History'),
         ('C', 'Classic'),
@@ -19,4 +22,4 @@ class Book(models.Model):
     cover = models.ImageField(upload_to="cover_imgs", blank=True)
 
     def __str__(self):
-        return self.title
+        return "{} - {}".format(self.title, self.id)

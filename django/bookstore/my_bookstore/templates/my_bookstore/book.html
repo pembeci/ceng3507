@@ -1,0 +1,15 @@
+{% extends "my_bookstore/base.html" %}
+
+{% load static %}
+
+{% block page_title %}
+{{ book.title }} - <b>({{ book.price }})</b>
+{% endblock page_title %}
+
+{% block content %}
+<img align=left
+     src="/media/{{ book.cover }}" width=180 alt="cover"/>
+<p>
+  {{ book.description }}
+</p>
+{% endblock content %}

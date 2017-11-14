@@ -1,0 +1,17 @@
+{% extends "my_bookstore/base.html" %}
+{% block page_title %}
+{% if cat_name %}
+{{ cat_name }} Books
+{% else %}
+BOOKS
+{% endif %}
+
+{% endblock page_title %}
+
+{% block content %}
+<ul>
+{% for book in books %}
+    <li><a href="{% url 'book' book.title|slugify book.id %}">{{ book.title }}</a></li>
+{% endfor %}
+</ul>
+{% endblock content %}
