@@ -9,9 +9,35 @@ BOOKS
 {% endblock page_title %}
 
 {% block content %}
-<ul>
+
+
+<div class="row">
 {% for book in books %}
-    <li><a href="{% url 'book' book.title|slugify book.id %}">{{ book.title }}</a></li>
+
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img src="/media/{{ book.cover }}" alt="...">
+      <div class="caption">
+        <h3>{{ book.title }}l</h3>
+        <p>  {{ book.description|truncatechars:200 }}</p>
+        <p><a href="{% url 'book' book.title|slugify book.id %}" class="btn btn-primary" role="button">Detail</a> <a href="#" class="btn btn-default" role="button">Buy</a></p>
+      </div>
+    </div>
+  </div>
+
+
+
+<!--<div class="media" >-->
+  <!--<div class="media-left">-->
+    <!--<a href="{% url 'book' book.title|slugify book.id %}">-->
+      <!--<img class="media-object " width="64" height="64" src="/media/{{ book.cover }}" alt="...">-->
+    <!--</a>-->
+  <!--</div>-->
+  <!--<div class="media-body">-->
+    <!--<h4 class="media-heading">{{ book.title }}</h4>-->
+    <!--{{ book.description}}-->
+  <!--</div>-->
+<!--</div>-->
 {% endfor %}
-</ul>
+</div>
 {% endblock content %}

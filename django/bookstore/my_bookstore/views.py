@@ -11,7 +11,8 @@ def index(request):
 def book_page(request, book_id, title):
     print(book_id, title)
     book = get_object_or_404(Book, pk=book_id)
-    context = {"book": book}
+
+    context = {"book": book }
     return render(request, "my_bookstore/book.html", context)
 
 def cat_page(request, cat):
