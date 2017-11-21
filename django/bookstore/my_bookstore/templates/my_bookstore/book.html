@@ -3,13 +3,34 @@
 {% load static %}
 
 {% block page_title %}
-{{ book.title }} - <b>({{ book.price }})</b>
+
+{{ book.title }}  <span class="label label-default">({{ book.price }})</span>
 {% endblock page_title %}
 
 {% block content %}
-<img align=left
-     src="/media/{{ book.cover }}" width=180 alt="cover"/>
-<p>
-  {{ book.description }}
-</p>
+
+
+<div class="media single-page" >
+  <div class="media-left">
+    <a href="{% url 'book' book.title|slugify book.id %}">
+      <img class="media-object" src="/media/{{ book.cover }}" alt="...">
+    </a>
+  </div>
+  <div class="media-body">
+    <h4 class="media-heading">{{ book.title }}</h4>
+    <p>{{ book.description}}</p>
+    <h2><span style="float:right">Price : <b >${{book.price}}</b></span>  <span class="label label-info" style="float:left">{{ book.get_cat_name }}</span></h2>
+    <div class="clearfix"></div>
+    <hr>
+    <div class="panel panel-default">
+  <div class="panel-heading">Other Informations</div>
+  <div class="panel-body">
+    <p><b>Model 1</b>: Lorem ipsum</p>
+    <p><b>Model 2</b>: Lorem ipsum</p>
+    <p><b>Model 3</b>: Lorem ipsum</p>
+  </div>
+</div>
+  </div>
+</div>
+
 {% endblock content %}

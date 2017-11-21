@@ -14,7 +14,7 @@
 		<link rel="shortcut icon" href="favicon.ico">
 
 		<!-- Bootstrap Core CSS file -->
-		<link rel="stylesheet" href="/static/assets/css/bootstrap.min.css">
+		<link rel="stylesheet" href="/static/assets/css/bootstrap.css">
 
 		<!-- Override CSS file - add your own CSS rules -->
 		<link rel="stylesheet" href="/static/assets/css/styles.css">
@@ -24,6 +24,11 @@
 			<script src="/static/assets/js/html5.js"></script>
 			<script src="/static/assets/js/respond.min.js"></script>
 		<![endif]-->
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300i,400,400i,600,600i,700,700i" rel="stylesheet">
+		<style type="text/css">
+			.single-page .media-heading { color: #FC7D01;     text-transform: uppercase;}
+
+		</style>
 	</head>
 	<body>
 
@@ -73,11 +78,11 @@
 			<!-- /.row -->
 
 			<div class="row">
-				<div class="col-sm-8">
+				<div class="col-sm-9">
 					{% block content %}
 					{% endblock content %}
 				</div>
-				<div class="col-sm-4">
+				<div class="col-sm-3">
 					<!-- Search -->
 					<div class="well">
 						<h4 class="margin-t-0">Search</h4>

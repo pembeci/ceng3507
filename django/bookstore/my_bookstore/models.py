@@ -23,3 +23,11 @@ class Book(models.Model):
 
     def __str__(self):
         return "{} - {}".format(self.title, self.id)
+
+    def get_cat_name(self):
+
+        for key in self.genre_dict:
+            if (self.genre_dict[key] ==  self.genre):
+                return key
+
+
