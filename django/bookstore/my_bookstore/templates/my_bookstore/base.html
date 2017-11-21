@@ -101,13 +101,16 @@
 					</div>
 
 					<!-- list group -->
+					{% block categories %}
 					<div class="list-group margin-b-3">
-					    <a href="#" class="active list-group-item">Category 1</a>
-					    <a href="#" class="list-group-item">Category 2</a>
-					    <a href="#" class="list-group-item">Category 3</a>
+ 					{% for cat_name in cat_names %}
+					    <a href="/category/{{cat_name|lower}}" class="list-group-item">{{cat_name}}</a>
+					{% endfor %}
 					</div>
+					{% endblock categories %}
 
                 	<!-- Panel -->
+                	
 					<div class="panel panel-default">
 						<div class="panel-heading">
 							<h4 class="panel-title">Sidebar panel widget</h4>

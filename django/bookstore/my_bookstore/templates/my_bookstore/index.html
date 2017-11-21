@@ -8,6 +8,12 @@ BOOKS
 
 {% endblock page_title %}
 
+{% block categories %}
+  {% with categories as cat_names %}
+     {{ block.super }}
+  {% endwith %}
+{% endblock categories %}
+
 {% block content %}
 
 

@@ -23,6 +23,7 @@ urlpatterns = [
     url(r'^$', views.index, name='index'),
     url(r'^book/(?P<title>.+)/(?P<book_id>[0-9]+)', views.book_page, name='book'),
     url(r'^category/(?P<cat>.+)', views.cat_page, name='book'),
+    url(r'^author/(?P<author>.+)/(?P<author_id>[0-9]+)', views.author_page, name='author'),
     url(r'^admin/', admin.site.urls),
 ]
 

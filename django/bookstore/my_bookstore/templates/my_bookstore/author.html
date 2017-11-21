@@ -1,0 +1,49 @@
+{% extends "my_bookstore/base.html" %}
+
+{% load static %}
+
+{% block page_title %}
+
+{{ author.name }} 
+
+{% endblock page_title %}
+
+{% block categories %}
+  {% with categories as cat_names %}
+     {{ block.super }}
+  {% endwith %}
+{% endblock categories %}
+					
+{% block content %}
+
+<div class="media single-page" >
+  {{ author.biography }}
+</div>
+<h2>Kitapları</h2>
+<ul>
+  {% for book in author.book_set.all %}
+    <li> <a href="{% url 'book' book.title|slugify book.id %}">{{book.title}}</a> </li>
+  {% empty %}
+     No books yet.
+  {% endfor %}
+  
+</ul>
+{% endblock content %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
