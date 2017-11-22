@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Book, Author
+from .models import Book, Author, Profile
 
 
 
@@ -15,3 +15,9 @@ class AuthorAdmin(admin.ModelAdmin):
   list_display = ['id', 'name']
 
 admin.site.register(Author, AuthorAdmin)
+
+class ProfileAdmin(admin.ModelAdmin):
+  model = Profile
+  # list_display = ['id', 'name']
+
+admin.site.register(Profile, ProfileAdmin)

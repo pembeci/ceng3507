@@ -3,6 +3,8 @@ from django.http import HttpResponse, Http404
 from django.template import loader
 from .models import Book, Author
 
+from .forms import SignUpForm
+
 def index(request):
     books = Book.objects.all()
     context = {"books": books}
@@ -31,9 +33,26 @@ def cat_page(request, cat):
     books = Book.objects.all().filter(genre=category)
     print("books", books)
     context = {"books": books, "cat_name": cat }
-    return render(request, "my_bookstore/index.html", context)
+    return render(request, "my_bookstore/category.html", context)
     
-    
+# user account views
+
+def signup(request):
+    if request.method == 'POST':
+        form = SignUpForm(request.POST)
+        if form.is_valid():
+            user = form.save()
+            # user.refresh_from_db()  # load the profile instance created by the signal
+            # user.profile.birth_date = form.cleaned_data.get('birth_date')
+            # user.save()
+            # raw_password = form.cleaned_data.get('password1')
+            # user = authenticate(username=user.username, password=raw_password)
+            # login(request, user)
+            return redirect('index')
+    else:
+        form = SignUpForm()
+
+    return render(request, 'my_bookstore/signup.html', {'form': form})
     
     
     

@@ -1,0 +1,16 @@
+<div class="row">
+{% for book in books_query %}
+
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img width=150 src="/media/{{ book.cover }}" alt="...">
+      <div class="caption">
+        <h3>{{ book.title }}l</h3>
+        <p>  {{ book.description|truncatechars:200 }}</p>
+        <p><a href="{% url 'book' book.title|slugify book.id %}" class="btn btn-primary" role="button">Detail</a> <a href="#" class="btn btn-default" role="button">Buy</a></p>
+      </div>
+    </div>
+  </div>
+
+{% endfor %}
+</div>

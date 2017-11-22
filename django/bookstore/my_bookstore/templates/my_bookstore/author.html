@@ -20,14 +20,7 @@
   {{ author.biography }}
 </div>
 <h2>Kitapları</h2>
-<ul>
-  {% for book in author.book_set.all %}
-    <li> <a href="{% url 'book' book.title|slugify book.id %}">{{book.title}}</a> </li>
-  {% empty %}
-     No books yet.
-  {% endfor %}
-  
-</ul>
+{% include "my_bookstore/book_list.html" with books_query=author.book_set.all %}
 {% endblock content %}
 
 

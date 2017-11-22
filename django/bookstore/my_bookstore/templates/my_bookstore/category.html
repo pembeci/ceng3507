@@ -1,6 +1,6 @@
 {% extends "my_bookstore/base.html" %}
 {% block page_title %}
-KÖTEKLİ BOOKSTORE
+{{ cat_name }} Books
 {% endblock page_title %}
 
 {% block categories %}
@@ -10,7 +10,7 @@ KÖTEKLİ BOOKSTORE
 {% endblock categories %}
 
 {% block content %}
-<p>Welcome to out bookstore ...</p>
+
 {% include "my_bookstore/book_list.html" with books_query=books %}
 
 {% endblock content %}
