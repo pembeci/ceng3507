@@ -1,7 +1,7 @@
 from django.shortcuts import get_object_or_404, render
 from django.http import HttpResponse, Http404
 from django.template import loader
-from .models import Book, Author
+from .models import Book, Author, Comment
 
 from .forms import SignUpForm
 
@@ -11,10 +11,38 @@ def index(request):
     return render(request, "my_bookstore/index.html", context)
 
 def book_page(request, book_id, title):
-    print(book_id, title)
     book = get_object_or_404(Book, pk=book_id)
+    form_errors = {}
+    form_values = {"title": "", "body": "", "rating": 0}
+    if request.POST:
+        print("rating=", request.POST["rating"], type(request.POST["rating"]))
+        print("comment=", request.POST["yorum"])
+        form_values["title"] = request.POST["title"]
+        form_values["body"] = request.POST["yorum"]
+        form_values["rating"] = int(request.POST["rating"])
+        if len(request.POST["yorum"]) < 10:
+            form_errors["body"] = "You comment is too short. It should be at least 10 characters"
+        if len(request.POST["title"]) == 0:
+            form_errors["title"] = "Title field is required"
+        if form_values["rating"] == 0:
+            form_errors["rating"] = "Please select a rating"
+        if len(form_errors) == 0:
+            new_comment = Comment()
+            new_comment.title = form_values["title"]
+            new_comment.body = form_values["body"]
+            new_comment.book = book
+            new_comment.rating = form_values["rating"]
+            new_comment.save()
+            form_values["title"] = ""
+            form_values["body"] = ""
+            form_values["rating"] = 0
+            print("SAVED")
+    else: # page loaded first time. no form POST data
+        pass
+        # print(request.POST["yorum"])
 
-    context = {"book": book}
+    context = {"book": book, "errors": form_errors,
+               "values": form_values}
     return render(request, "my_bookstore/book.html", context)
 
 def author_page(request, author_id, author):

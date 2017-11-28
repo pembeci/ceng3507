@@ -39,5 +39,43 @@
 </div>
   </div>
 </div>
+<a name="comment"></a>
+<h3>Add your comment</h3>
+<form method="post" action="#comment">
+  {% csrf_token %}
+  Title: <input type="text" value="{{values.title}}" name="title"> <br/>
+  {% if errors.title %}
+  <p style="color: red">{{errors.title}}</p>
+  {% endif %}
+  Body : <textarea name="yorum">{{values.body}}</textarea> <br/>
+  {% if errors.body %}
+  <p style="color: red">{{errors.body}}</p>
+  {% endif %}
+  Rating:
+  <select name="rating" >
+    <option value="0" {% if values.rating == 0 %}selected{%endif%}>
+      Please select...</option>
+    <option value="5" {% if values.rating == 5 %}selected{%endif%}>5 - Very Good</option>
+    <option value="4" {% if values.rating == 4 %}selected{%endif%}>4 - Good</option>
+    <option value="3" {% if values.rating == 3 %}selected{%endif%}>3 - Average</option>
+    <option value="2" {% if values.rating == 2 %}selected{%endif%}>2 - Poor</option>
+    <option value="1" {% if values.rating == 1 %}selected{%endif%}>1 - Very Poor</option>
+  </select> <br/>
+  {% if errors.rating %}
+  <p style="color: red">{{errors.rating}}</p>
+  {% endif %}
+  <input type="submit" value="SAVE COMMENT">
 
+</form>
 {% endblock content %}
+
+
+
+
+
+
+
+
+
+
+
