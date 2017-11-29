@@ -25,6 +25,7 @@ urlpatterns = [
     url(r'^category/(?P<cat>.+)', views.cat_page, name='book'),
     url(r'^author/(?P<author>.+)/(?P<author_id>[0-9]+)', views.author_page, name='author'),
     url(r'^admin/', admin.site.urls),
+    url(r'^test_forms/', views.test_forms),
 ]
 
 # user account related

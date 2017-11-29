@@ -1,9 +1,10 @@
 from django.shortcuts import get_object_or_404, render
 from django.http import HttpResponse, Http404
 from django.template import loader
+
 from .models import Book, Author, Comment
 
-from .forms import SignUpForm
+from .forms import SignUpForm, SampleForm, CommentForm
 
 def index(request):
     books = Book.objects.all()
@@ -82,7 +83,20 @@ def signup(request):
 
     return render(request, 'my_bookstore/signup.html', {'form': form})
     
-    
+def test_forms(request):
+    if (request.POST):
+        form = SampleForm(request.POST)
+        print(request.POST)
+        form2 = CommentForm(request.POST)
+        if form2.is_valid():
+            form2.save()
+    else:
+        form = SampleForm()
+        form2 = CommentForm()
+    return render(request, 'my_bookstore/test_forms.html',
+                    {'form': form, 'form2': form2}
+                 )
+
     
     
     
