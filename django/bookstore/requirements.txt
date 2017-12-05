@@ -1,2 +1,3 @@
 django-debug-toolbar>=1.9
+django-star-ratings
 
