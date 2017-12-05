@@ -1,6 +1,7 @@
-from django.shortcuts import get_object_or_404, render
+from django.shortcuts import get_object_or_404, render, redirect
 from django.http import HttpResponse, Http404
 from django.template import loader
+from django.contrib.auth import login, authenticate, logout
 
 from .models import Book, Author, Comment
 
@@ -9,6 +10,7 @@ from .forms import SignUpForm, SampleForm, CommentForm
 def index(request):
     books = Book.objects.all()
     context = {"books": books}
+    print(request.user)
     return render(request, "my_bookstore/index.html", context)
 
 def book_page(request, book_id, title):
@@ -68,21 +70,42 @@ def cat_page(request, cat):
 
 def signup(request):
     if request.method == 'POST':
-        form = SignUpForm(request.POST)
+        form = SignUpForm(request.POST, request.FILES)
         if form.is_valid():
             user = form.save()
-            # user.refresh_from_db()  # load the profile instance created by the signal
-            # user.profile.birth_date = form.cleaned_data.get('birth_date')
-            # user.save()
-            # raw_password = form.cleaned_data.get('password1')
-            # user = authenticate(username=user.username, password=raw_password)
-            # login(request, user)
-            return redirect('index')
+            user.refresh_from_db()  # load the profile instance created by the signal
+            user.profile.bio = form.cleaned_data.get('bio')
+            print("avatar", form.cleaned_data.get('avatar'))
+            print(request.FILES)
+            user.profile.avatar = request.FILES['avatar']
+            user.save()
+            raw_password = form.cleaned_data.get('password1')
+            user = authenticate(username=user.username, password=raw_password)
+            login(request, user)
+            return redirect('/')
     else:
         form = SignUpForm()
 
     return render(request, 'my_bookstore/signup.html', {'form': form})
-    
+
+def logout_view(request):
+    logout(request)
+    # return redirect(request.path)
+    return redirect("/")
+
+def login_view(request):
+    print(request.POST)
+    username = request.POST['username']
+    password = request.POST['password']
+    user = authenticate(request, username=username, password=password)
+    if user is not None:
+        login(request, user)
+    else:
+        pass
+    # return redirect(request.path)
+    return redirect("/")
+
+
 def test_forms(request):
     if (request.POST):
         form = SampleForm(request.POST)

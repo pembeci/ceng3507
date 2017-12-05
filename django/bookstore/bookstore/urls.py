@@ -13,11 +13,12 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-from django.conf.urls import url
+from django.conf.urls import url, include
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.conf import settings
 from my_bookstore import views
+
 
 urlpatterns = [
     url(r'^$', views.index, name='index'),
@@ -30,7 +31,9 @@ urlpatterns = [
 
 # user account related
 urlpatterns += [
-url(r'^signup/$', views.signup, name='signup'),
+  url(r'^signup/$', views.signup, name='signup'),
+  url(r'^logout/$', views.logout_view, name='logout'),
+  url(r'^login/$', views.login_view, name='login'),
 ]
 
 urlpatterns += static(settings.MEDIA_URL,
@@ -38,3 +41,9 @@ urlpatterns += static(settings.MEDIA_URL,
 
 urlpatterns += static(settings.STATIC_URL,
                       document_root=settings.STATIC_ROOT)
+
+if settings.DEBUG:
+    import debug_toolbar
+    urlpatterns = [
+        url(r'^__debug__/', include(debug_toolbar.urls)),
+    ] + urlpatterns

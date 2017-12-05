@@ -15,7 +15,7 @@ Account Signup
 {% endblock categories %}
 
 {% block content %}
-  <form method="post">
+  <form  enctype="multipart/form-data" method="post">
     {% csrf_token %}
     {% for field in form %}
       <p>

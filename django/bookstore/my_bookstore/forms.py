@@ -16,11 +16,11 @@ RATING_CHOICES = (
 )
 
 class SignUpForm(UserCreationForm):
-    # birth_date = forms.DateField(help_text='Required. Format: YYYY-MM-DD')
-
+    bio = forms.CharField(widget=forms.Textarea, required=False, help_text='Describe yourself to us.')
+    avatar = forms.ImageField(required=False, help_text='Your avatar.')
     class Meta:
         model = User
-        fields = ('username', 'password1' )
+        fields = ('username', 'password1', 'password2','bio', 'avatar')
 
 class SampleForm(forms.Form):
     name = forms.CharField()
