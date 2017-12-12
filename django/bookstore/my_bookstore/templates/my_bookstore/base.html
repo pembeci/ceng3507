@@ -90,7 +90,7 @@
 						<h4>{{ request.user }}</h4>
 						<a href="/logout">logout</a>
 					  {% else %}
-						<form action="/login/" method="post">
+						<form action="/login?next={{request.path|urlencode:''}}/" method="post">
 							{% csrf_token %}
 							Username: <input type="text" size="10" name="username"><br/>
 							Password: <input type="password" size="10" name="password"><br/>
@@ -119,7 +119,7 @@
 					{% block categories %}
 					<div class="list-group margin-b-3">
  					{% for cat_name in cat_names %}
-					    <a href="/category/{{cat_name|lower}}" class="list-group-item">{{cat_name}}</a>
+					    <a href="/category/{{cat_name|lower|urlencode}}/" class="list-group-item">{{cat_name}}</a>
 					{% endfor %}
 					</div>
 					{% endblock categories %}

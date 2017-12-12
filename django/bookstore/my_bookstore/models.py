@@ -66,7 +66,8 @@ def add_cat_names(request):
 class Comment(models.Model):
     title = models.CharField(max_length=150, blank=True)
     body = models.TextField(blank=True)
-    book = models.ForeignKey('Book', on_delete=models.CASCADE, blank=True)
+    book = models.ForeignKey('Book', on_delete=models.CASCADE)
+    user = models.ForeignKey("Profile", on_delete=models.CASCADE)
     rating = models.IntegerField(blank=True)
     
     

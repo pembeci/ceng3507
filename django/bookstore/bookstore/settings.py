@@ -28,6 +28,9 @@ DEBUG = True
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', '[::1]']
 
 INTERNAL_IPS = ['127.0.0.1']
+
+APPEND_SLASH=False
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -39,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'debug_toolbar',
+    'django_extensions',
 ]
 
 MIDDLEWARE = [

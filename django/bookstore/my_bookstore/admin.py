@@ -24,6 +24,6 @@ admin.site.register(Profile, ProfileAdmin)
 
 class CommentAdmin(admin.ModelAdmin):
   model = Comment
-  list_display = ['title', 'book', 'rating']
+  list_display = ['id', 'title', 'book', 'rating']
 
 admin.site.register(Comment, CommentAdmin)

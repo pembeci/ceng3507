@@ -76,3 +76,18 @@ body { padding-top: 70px; }
 	margin-top: 3em;
 	margin-bottom: 3em;
 }
+
+.comment {
+  border: 2px solid black;
+  margin-bottom: 20px;
+  padding: 5px;
+}
+
+.comment .title {
+  margin: 3px;
+  background-color: pink;
+}
+
+.comment .body {
+  padding: 3px 5px 30px 5px;
+}

@@ -23,7 +23,7 @@ from my_bookstore import views
 urlpatterns = [
     url(r'^$', views.index, name='index'),
     url(r'^book/(?P<title>.+)/(?P<book_id>[0-9]+)', views.book_page, name='book'),
-    url(r'^category/(?P<cat>.+)', views.cat_page, name='book'),
+    url(r'^category/(?P<cat>.+)/', views.cat_page, name='book'),
     url(r'^author/(?P<author>.+)/(?P<author_id>[0-9]+)', views.author_page, name='author'),
     url(r'^admin/', admin.site.urls),
     url(r'^test_forms/', views.test_forms),
@@ -32,8 +32,9 @@ urlpatterns = [
 # user account related
 urlpatterns += [
   url(r'^signup/$', views.signup, name='signup'),
+  url(r'^delete_comment.*', views.delete_comment, name='delete_comment'),
   url(r'^logout/$', views.logout_view, name='logout'),
-  url(r'^login/$', views.login_view, name='login'),
+  url(r'^login.*', views.login_view, name='login'),
 ]
 
 urlpatterns += static(settings.MEDIA_URL,

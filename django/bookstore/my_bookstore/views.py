@@ -34,6 +34,7 @@ def book_page(request, book_id, title):
             new_comment.title = form_values["title"]
             new_comment.body = form_values["body"]
             new_comment.book = book
+            new_comment.user = request.user.profile
             new_comment.rating = form_values["rating"]
             new_comment.save()
             form_values["title"] = ""
@@ -43,9 +44,11 @@ def book_page(request, book_id, title):
     else: # page loaded first time. no form POST data
         pass
         # print(request.POST["yorum"])
+    user_can_delete = request.user.has_perm("my_bookstore.delete_comment")
+
 
     context = {"book": book, "errors": form_errors,
-               "values": form_values}
+               "values": form_values, "can_delete": user_can_delete}
     return render(request, "my_bookstore/book.html", context)
 
 def author_page(request, author_id, author):
@@ -94,7 +97,8 @@ def logout_view(request):
     return redirect("/")
 
 def login_view(request):
-    print(request.POST)
+    print("POST",request.POST)
+    print("GET", request.GET)
     username = request.POST['username']
     password = request.POST['password']
     user = authenticate(request, username=username, password=password)
@@ -103,7 +107,10 @@ def login_view(request):
     else:
         pass
     # return redirect(request.path)
-    return redirect("/")
+    if request.GET["next"]:
+        return redirect("/")
+    else:
+        return redirect(request.GET["next"])
 
 
 def test_forms(request):
@@ -121,6 +128,17 @@ def test_forms(request):
                  )
 
     
-    
+def delete_comment(request):
+    if request.method == 'POST':
+        comment_id = int(request.POST["cid"])
+        comment = get_object_or_404(Comment, pk=comment_id)
+        if request.user.has_perm("my_bookstore.delete_comment") or \
+           request.user.profile == comment.user:
+            comment.delete()
+        else:
+            print("Something is wrong...")
+        print(request.POST)
+
+    return redirect(request.GET["next"])
     
     
