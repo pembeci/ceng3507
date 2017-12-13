@@ -27,6 +27,7 @@ urlpatterns = [
     url(r'^author/(?P<author>.+)/(?P<author_id>[0-9]+)', views.author_page, name='author'),
     url(r'^admin/', admin.site.urls),
     url(r'^test_forms/', views.test_forms),
+    url(r'^test_session/', views.test_session),
 ]
 
 # user account related

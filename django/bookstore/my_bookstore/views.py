@@ -141,4 +141,11 @@ def delete_comment(request):
 
     return redirect(request.GET["next"])
     
-    
+def test_session(request):
+    page_count = request.session.get("count", 0)
+    page_count += 1
+    request.session["count"] = page_count
+    if request.GET:
+        request.session["color"] = request.GET["color"]
+    color = request.session.get("color", "gray")
+    return render(request, "my_bookstore/session.html", {"color": color})

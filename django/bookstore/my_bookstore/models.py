@@ -59,8 +59,9 @@ class Book(models.Model):
             if (self.genre_dict[key] ==  self.genre):
                 return key
 
-def add_cat_names(request):    
-    return {"categories": Book.genre_dict.keys()}
+def add_cat_names(request):
+    color = request.session.get("color", "gray")
+    return {"categories": Book.genre_dict.keys(), "color": color}
     
     
 class Comment(models.Model):

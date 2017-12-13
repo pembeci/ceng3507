@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test Sessions</title>
+    <style>
+        body {
+           margin-bottom: 400px;
+           background-color: {{ color }};
+        }
+    </style>
+</head>
+<body>
+You visited this page {{ request.session.count }} times.
+Choose your background color:
+<form>
+    <select name="color">
+        <option>pink</option>
+        <option>brown</option>
+        <option>lightblue</option>
+        <option>cyan</option>
+        <option>orange</option>
+    </select>
+    <input type="submit" value="CHANGE" />
+</form>
+</body>
+</html>
